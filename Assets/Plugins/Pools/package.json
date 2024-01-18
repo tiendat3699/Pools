@@ -6,7 +6,7 @@
     "unity": "2021.3",
     "description": "Simple object pool for unity.",
     "license": "MIT",
-    "dependencies": {
-        "com.unity.visualscripting": "1.7.8"
-    }
+    "keywords": ["tool","pooling"],
+    "licensesUrl": "https://github.com/tiendat3699/Pools?tab=MIT-1-ov-file",
+    "documentationUrl": "https://github.com/tiendat3699/Pools?tab=readme-ov-file"
 }
