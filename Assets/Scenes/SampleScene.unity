@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -301,6 +301,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1310640815 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4969129973376214439, guid: 53851f8fb3e232647addb5653e2f5ba0, type: 3}
+  m_PrefabInstance: {fileID: 6177668965294398133}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1343936401
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,7 +335,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a9af6dca79625488bf0fa9eaa71172, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PoolContainer: {_prefab: {fileID: 0}, _defaultCapacity: 10, _max: 100, _collectionCheck: 0}
+  _pool:
+    _source: {fileID: 1310640815}
+    _defaultCapacity: 10
+    _max: 100
+    _collectionCheck: 0
 --- !u!4 &1343936403
 Transform:
   m_ObjectHideFlags: 0

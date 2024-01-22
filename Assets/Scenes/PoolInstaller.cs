@@ -3,18 +3,11 @@ using UnityEngine;
 
 public class PoolInstaller : MonoBehaviour
 {
-    public PoolContainer<GameObject> PoolContainer;
-    
+    public Pool<GameObject> _pool;
 
-    void Start()
-    {
-        //create
-        PoolContainer.Create();
-    }
 
-    private void OnDestroy()
+    void Awake()
     {
-        //clear
-        PoolContainer.Clear();
+
     }
 }

@@ -32,12 +32,7 @@ namespace Pools.Runtime
             _collectionCheck = collectionCheck;
             _pool = new ObjectPool<T>(CreateFunc, ActionOnGet, ActionOnRelease, ActionOnDestroy, _collectionCheck, _defaultCapacity, _max);
         }
-
-        public void Init()
-        {
-            _pool = new ObjectPool<T>(CreateFunc, ActionOnGet, ActionOnRelease, ActionOnDestroy, _collectionCheck, _defaultCapacity, _max);
-        }
-
+        
         public static Pool<T> CreatePrefabPool(T prefab, int defaultCapacity = 10, int max = 100, bool collectionCheck = false)
         {
             if(!_prefabLookUp.TryGetValue(prefab, out var pool))
@@ -78,7 +73,6 @@ namespace Pools.Runtime
 
         public void Clear()
         {
-            _pool.Clear();
             if (_prefabLookUp.TryGetValue(_source, out var pool))
             { 
                 _prefabLookUp.Remove(_source);
@@ -88,11 +82,12 @@ namespace Pools.Runtime
             {
                 _instanceLookUp.Remove(item.Key);
             }
+            _pool.Clear();
         }
 
         private void ActionOnDestroy(T obj)
         {
-            if(obj == null) return;
+            // if(obj == null) return;
             _instanceLookUp.Remove(obj);
             Object.Destroy(obj);
         }
