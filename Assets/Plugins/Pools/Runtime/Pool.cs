@@ -14,7 +14,7 @@ namespace Pools.Runtime
         [SerializeField] private bool _collectionCheck;
         private ObjectPool<T> _pool;
         public int CountAll => _pool.CountAll;
-        public int CountActive => _pool.CountInactive;
+        public int CountActive => _pool.CountActive;
         public int CountInactive => _pool.CountInactive;
         private static readonly Dictionary<T, Pool<T>> _prefabLookUp = new ();
         private static readonly Dictionary<T, Pool<T>> _instanceLookUp = new ();

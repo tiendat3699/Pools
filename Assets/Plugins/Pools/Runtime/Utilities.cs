@@ -10,14 +10,13 @@ namespace Pools.Runtime
             {
                 return (GameObject)obj;
             }
-            else if (obj is Component component)
+            
+            if (obj is Component component)
             {
                 return component.gameObject;
             }
-            else
-            {
-                return null;
-            }
+            
+            return null;
         }
     }
 }
