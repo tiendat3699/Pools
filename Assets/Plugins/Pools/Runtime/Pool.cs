@@ -73,6 +73,7 @@ namespace Pools.Runtime
 
         public void Clear()
         {
+            _pool.Clear();
             if (_prefabLookUp.TryGetValue(_source, out var pool))
             { 
                 _prefabLookUp.Remove(_source);
@@ -82,7 +83,6 @@ namespace Pools.Runtime
             {
                 _instanceLookUp.Remove(item.Key);
             }
-            _pool.Clear();
         }
 
         private void ActionOnDestroy(T obj)
