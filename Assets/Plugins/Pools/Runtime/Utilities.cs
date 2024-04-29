@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Pools.Runtime
 {
-    internal static class Utilities
+    public static class Utilities
     {
         public static GameObject GameObject(this Object obj)
         {
